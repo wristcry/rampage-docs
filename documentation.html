@@ -1,0 +1,523 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ДАКУМЕНТАЦИЯ ДЛЯ ЛУЧШИВО СЕРВЕРА РАМПЫЙДЖ СРП</title>
+    <meta name="description" content="A simple HTML/CSS DocumentationTemplate">
+    <meta name="author" content="Carlos Yllobre">
+
+    <link rel="stylesheet" href="style.css?">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <div class="navbar clear nav-top">
+        <div class="row content">
+            <a href="#"><img class="logo" src="file.gif" width="80" height="100"></a>
+            <a class="right" href="#"><i class="fas fa-book"></i>&nbsp; А зачем тут эта кнопачка 0_о</a>
+            <a class="right" href="#"><i class="fas fa-paper-plane"></i>&nbsp; ты че еблан?</a>
+        </div>
+    </div>
+
+    <div class="container clear">
+        <div class="row wrapper">
+
+            <div class="sidepanel">
+
+                <a class="title" href="#">Introduction</a>
+                
+                <a class="section" href="#">Template source</a>
+				<a class="section" href="#">Нахуй это нужно</a>
+				
+				<div class="divider left"></div>
+				
+				<a class="section" href="#">ВАЖНО</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#advanced">Plugins</a>
+
+                <a class="section" href="#advanced">Interception.ClothingWeight</a>
+				<a class="sub-section" href="#cw_cfg">Config</a>
+                <a class="section" href="#kf">Interception.KillFeed</a>
+				<a class="sub-section" href="#kf_cfg">Config</a>
+                <a class="section" href="#kits">Interception.Kits</a>
+				<a class="sub-section" href="#kits_cfg">Config</a>
+				<a class="sub-section" href="#kits_perm">Permissions</a>
+				<a class="sub-section" href="#kits_cmd">Commands</a>
+				<a class="section" href="#ma">Interception.MessageAnnouncer</a>
+				<a class="sub-section" href="#ma_cfg">Config</a>
+				<a class="section" href="#tpa">Interception.TPA</a>
+				<a class="sub-section" href="#tpa_cfg">Config</a>
+				<a class="sub-section" href="#tpa_perm">Permissions</a>
+				<a class="sub-section" href="#tpa_cmd">Commands</a>
+                <a class="section" href="#wc">Interception.WebsiteCommands</a>
+				<a class="sub-section" href="#wc_cfg">Config</a>
+				<a class="sub-section" href="#wc_cmd">Commands</a>
+				<a class="section" href="#pvp">StuntFox.PvPShop</a>
+				<a class="sub-section" href="#pvp_cfg">Config</a>
+				<a class="sub-section" href="#pvp_perm">Permissions</a>
+				<a class="sub-section" href="#pvp_cmd">Commands</a>
+				<a class="section" href="#wb">WreckingBall</a>
+				<a class="sub-section" href="#wb_cfg">Config</a>
+            
+             <div class="space double"></div>
+
+            </div>
+
+            <div class="right-col">
+            
+
+
+                <h1 >Template source</h1>
+                
+                <p>This template was made by <a href="https://github.com/charlyllo" target="_blank">https://github.com/charlyllo</a><br>Template source: <a href="https://github.com/charlyllo/doctemplate" target="_blank">https://github.com/charlyllo/doctemplate</a></p> 
+            
+                <h2>Нахуй это нужно</h2>
+             
+                <p>Да мне просто уже самому впадлу дс листать чтобы что-то связанное с этим найти<br>Ну и чтобы в случае чего мне не ебали мозги вопросами "как настроить" и "как починить все сломалось"</p>
+                
+                <div class="divider" style="width:24%; margin:30px 0;"></div>
+				
+				<h2>Я ЖДУ МОД НА АНИМЕШНЫХ ДЕВОК БЛЕАДЬ</h2>
+				
+				<div class="divider" style="width:24%; margin:30px 0;"></div>
+                
+                <h1>Plugins</h1>
+                  
+                <br id="cw">
+				<h2>Interception.ClothingWeight</h2>
+
+                <p>
+                    Изменение гравитации/скорости/прыжков при ношении определенного сета брони
+                </p>
+                
+				<br id="cw_cfg">
+				<h3>Config</h3>
+				   <ul>
+                    <li>
+                    <b>default_gravity_multiplier</b> - дефолт модификатор гравитации (1 - дефолт в самой игре), будет ставится если у чела нет брони(донатной или вообще)
+                    </li>
+					<li>
+                    <b>default_speed_multiplier</b> - дефолт модификатор скорости (1 - дефолт в самой игре), будет ставится если у чела нет брони(донатной или вообще)
+                    </li>
+                    <li>
+                    <b>default_jump_multiplier</b> - дефолт модификатор прыжка (1 - дефолт в самой игре), будет ставится если у чела нет брони(донатной или вообще)
+					</li>
+					<li>
+                    <b>armor_sets</b> - список сетов
+					</li>
+					<li>
+                    <b>backpack_id</b> - айди рюкзака
+					</li>
+					<li>
+                    <b>face_id</b> - айди какой-то хуйни (я хз че эт серьезно, но это элемент одежды у игрока)
+					</li>
+					<li>
+                    <b>glasses_id</b> - айди очков
+					</li>
+					<li>
+                    <b>hat_id</b> - айди шлема
+					</li>
+					<li>
+                    <b>mask_id</b> -  айди маски(я пенис у меня маска ХАХАХАХАХ)
+					</li>
+					<li>
+                    <b>pants_id</b> - айди штанов(за 40 гривен)
+					</li>
+					<li>
+                    <b>shirt_id</b> - айди рубахи
+					</li>
+					<li>
+                    <b>vest_id</b> - айди броника
+					</li>
+					<li>
+                    <b>gravity_multiplier</b> - модификатор гравитации при одетом сете
+					</li>
+					<li>
+                    <b>speed_multiplier</b> - модификатор скорости при одетом сете
+					</li>
+					<li>
+                    <b>jump_multiplier</b> - модификатор прыжка при одетом сете
+					</li>
+				</ul>
+				
+				<br id="kf_cmd">
+				<h2>Interception.KillFeed</h2>
+
+                <p>
+                    Список убийств/смертей в правом верхнем углу экрана
+                </p>
+				<br id="kf_cfg">
+				<h3>Config</h3>
+				   <ul>
+                    <li>
+                    <b>effect_id</b> - айди эффекта(не трогать блять)
+					</li>
+                    <li>
+                    <b>effect_key</b> - айди ключа эффекта(не трогать блять)
+                    </li>
+                    <li>
+                    <b>buffer_max_update_time_seconds</b> - если в течении указанного тут времени не происходит ни одной смерти - юи исчезает
+					</li>
+                </ul>
+				
+				<br id="kits">
+				<h2>Interception.Kits</h2>
+
+                <p>
+                    ?????? Киты лол (кста юи впадлу делать если честно(но если прям надо то сделаю))
+                </p>
+				
+				<br id="kits_cfg">
+				<h3>Config</h3>
+				   <ul>
+                    <li>
+                    <b>display_all_kits</b> - показывать при вводе /kits все киты(при false показывает только те на которые есть пермишн либо есть пермишн kits.creative)
+                    </li>
+					<li>
+                    <b>remove_cooldowns_on_kit_remove</b> - удалять из бд все кулдауны связанные с китом при его удалении (чтобы не засирать базу данных)
+                    </li>
+                    <li>
+                    <b>kit_list_color</b> - цвет сообщения при вводе /kits
+                    </li>
+                    <li>
+                    <b>kits</b> - список китов
+                    </li>
+                    <li>
+                    <b>name</b> - название кита
+                    </li>
+                    <li>
+                    <b>cooldown</b> - кд в секундах
+                    </li>
+                    <li>
+                    <b>reset_cooldown_on_death</b> - убирать кд при смерти игрока
+                    </li>
+                    <li>
+                    <b>experience</b> - кол-во экспы выдаваемой при получении кита
+                    </li>
+                    <li>
+                    <b>items</b> - список предметов выдаваемых при получении кита
+                    </li>
+                    <li>
+                    <b>id</b> - айди предмета
+                    </li>
+                    <li>
+                    <b>amount</b> - количество предметов(если это магазин или коробка с патронами - то кол-во патронов)
+                    </li>
+                    <li>
+                    <b>durability</b> - прочность предмета(если она у него есть)
+                    </li>
+                    <li>
+                    <b>sight</b> - прицел(если оружие)
+                    </li>
+                    <li>
+                    <b>tactical</b> - рукоятка
+                    </li>
+                    <li>
+                    <b>grip</b> - я забыл что это за обвес
+                    </li>
+                    <li>
+                    <b>barrel</b> - глушитель, etc.
+                    </li>
+                    <li>
+                    <b>magazine</b> - магазин
+                    </li>
+                    <li>
+                    <b>firemode</b> - режим стрельбы
+                    </li>
+                    <li>
+                    <b>fuel</b> - кол-во бензина(если это канистра)
+                    </li>
+                </ul>
+				<br id="kits_perm">
+				<h3>Permissions</h3>
+				   <ul>
+                    <li>
+                    <b>kits.kadd</b> - /kadd
+                    </li>
+                    <li>
+                    <b>kits.kdel</b> - /kdel
+                    </li>
+                    <li>
+                    <b>kits.kexp</b> - /kexp
+                    </li>
+                    <li>
+                    <b>kits.kiadd</b> - /kiadd
+                    </li>
+                    <li>
+                    <b>kits.kit</b> - /kit
+                    </li>
+                    <li>
+                    <b>kits.kitm</b> - /kitm
+                    </li>
+                    <li>
+                    <b>kits.list</b> - /kits
+                    </li>
+                    <li>
+                    <b>kits.kresetcd</b> - /kresetcd (ненужный нигде пермишн)
+                    </li>
+                    <li>
+                    <b>kits.creative</b> - пермишн позволяющий использовать все киты
+                    </li>
+                    <li>
+                    <b>kit.[kit_name]</b> - пермишн для конкретного кита
+                    </li>
+                </ul>
+				<br id="kits_cmd">
+				<h3>Commands</h3>
+				   <ul>
+                    <li>
+                    <b>/kadd [name]</b> - создать пустой кит
+                    </li>
+                    <li>
+                    <b>/kdel [name]</b> - удалить кит
+                    </li>
+                    <li>
+                    <b>/kexp [name] [amount]</b> - установить кол-во выдаваемой экспы в ките
+                    </li>
+                    <li>
+                    <b>/kiadd [name] [cooldown]</b> - создать кит со списком предметов созданным на основе инвентаря
+                    </li>
+                    <li>
+                    <b>/kit [name]</b> - получить кит
+                    </li>
+                    <li>
+                    <b>/kitm [name]</b> - добавить в кит все предметы из инвентаря
+                    </li>
+                    <li>
+                    <b>/kits</b> - список доступных китов
+                    </li>
+                    <li>
+                    <b>/kresetcd [name] [player]</b> - убрать существующий кулдаун кита для конкретного игрока(эта команда вызывается только с консоли)
+                    </li>
+                </ul>
+				
+				<br id="ma">
+				<h2>Interception.MessageAnnouncer</h2>
+
+                <p>
+                    Автоматические сообщения в чат отправляемые с определенным интервалом (и с ИКОНАЧКАМИ)
+                </p>
+				<br id="ma_cfg">
+				<h3>Config</h3>
+				   <ul>
+                    <li>
+                    <b>time_min_seconds</b> - минимальное время отправки следующего сообщения
+                    </li>
+                    <li>
+                    <b>time_max_seconds</b> - максимальное время отправки следующего сообщения
+                    </li>
+                    <li>
+                    <b>messages</b> - список сообщений
+                    </li>
+                    <li>
+                    <b>text</b> - текст сообщения
+                    </li>
+                    <li>
+                    <b>color</b> - цвет сообщения
+                    </li>
+                    <li>
+                    <b>icon_url</b> - ссылка на картинку
+                    </li>
+                    <li>
+                    <b>use_rich_text</b> - рич текст, классная штука например если надо сделать <b style="color: #FF0000">КРУ</b><b style="color: #00FF00">ТОЙ</b> <b style="color: #0000FF">ТЕКСТ</b><br>как это юзать написано <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html" target="_blank">вот тут</a>
+                    </li>
+                </ul>
+				
+				<br id="tpa">
+				<h2>Interception.TPA</h2>
+
+                <p>
+                    тпа с юишкой
+                </p>
+				<br id="tpa_cfg">
+				<h3>Config</h3>
+				   <ul>
+                  <li>
+                    <b>effect_id</b> - айди эффекта(не трогать блять)
+                    </li>
+                    <li>
+                    <b>effect_key</b> - ключ эффекта(не трогать блять)
+                    </li>
+                    <li>
+                    <b>use_plugin_keys</b> - юзать плагин кеи вместо обычных кнопок(ну вот эти вот точка, запятая и т.д.)(ваще не трогай лучше нахуй)
+                    </li>
+                    <li>
+                    <b>accept_key_index</b> - индекс кнопки для принятия(вот поэтому верхнее лучше не трогать)(ЭТО КСТАТИ ТОЖЕ)
+                    </li>
+                    <li>
+                    <b>decline_key_index</b> - индекс кнопки для отмены(тож не трогать)
+                    </li>
+                    <li>
+                    <b>tpa_cooldown_seconds</b> - кд на запрос тп
+                    </li>
+                    <li>
+                    <b>accept_cooldown_seconds</b> - кд на принятие тп
+                    </li>
+                    <li>
+                    <b>active_time_seconds</b> - время которое запрос будет считаться активным
+                    </li>
+                </ul>
+				<br id="tpa_perm">
+				<h3>Permissions</h3>
+				   <ul>
+                    <li>
+                    <b>interception.tpa.tpa</b> - /tpa
+                    </li>
+                </ul>
+				<br id="tpa_cmd">
+				<h3>Commands</h3>
+				   <ul>
+                    <li>
+                    <b>/tpa [player]</b> - отправить запрос на телепортацию
+                    </li>
+                </ul>
+				
+				<br id="wc">
+				<h2>Interception.WebsiteCommands</h2>
+
+                <p>
+                    ссылочки через команды
+                </p>
+				<br id="wc_cfg">
+				<h3>Config</h3>
+				   <ul>
+                    <li>
+                    <b>commands</b> - список команд
+					</li>
+                    <li>
+                    <b>name</b> - сама команда (типо если name == vk то создается команда /vk)
+					</li>
+                    <li>
+                    <b>description</b> - текст который будет написан в этом окошке когда прописываешь добавленную команду
+					</li>
+                    <li>
+                    <b>url</b> - ссылка
+					</li>
+                </ul>
+				<br id="wc_cmd">
+				<h3>Commands</h3>
+				   <ul>
+                    <li>
+                    <b>ну какие в кфг сделаешь такие и будут епта, пермишнов нет если че</b>
+					</li>
+                </ul>
+				
+				<br id="pvp">
+				<h2>StuntFox.PvPShop</h2>
+
+                <p>
+                    ссылочки через команды
+                </p>
+				<br id="pvp_cfg">
+				<h3>Config</h3>
+				   <ul>
+                    <li>
+                    <b>initial_balance</b> - начальный баланс
+                    </li>
+                    <li>
+                    <b>items</b> - список предметов
+                    </li>
+                    <li>
+                    <b>item_id</b> - айди предмета
+                    </li>
+                    <li>
+                    <b>buy_cost</b> - стоимость покупки предмета
+                    </li>
+                    <li>
+                    <b>sell_cost</b> - стоимость продажи предмета
+                    </li>
+                    <li>
+                    <b>vehicles</b> - список транспорта
+                    </li>
+                    <li>
+                    <b>vehicle_id</b> - айди транспорта
+                    </li>
+                    <li>
+                    <b>cost</b> - цена покупки транспорта
+                    </li>
+                </ul>
+				<br id="pvp_perm">
+				<h3>Permissions</h3>
+				   <ul>
+                    <li>
+                    <b>sf.pvpshop.balance</b> - /balance
+                    </li>
+                    <li>
+                    <b>sf.pvpshop.buy</b> - /buy
+                    </li>
+                    <li>
+                    <b>sf.pvpshop.buyv</b> - /buyv
+                    </li>
+                    <li>
+                    <b>sf.pvpshop.cost</b> - /cost
+                    </li>
+                    <li>
+                    <b>sf.pvpshop.costv</b> - /costv
+                    </li>
+                    <li>
+                    <b>sf.pvpshop.sell</b> - /sell
+                    </li>
+                    <li>
+                    <b>sf.pvpshop.setbalance</b> - /setbalance
+                    </li>
+                </ul>
+				<br id="pvp_cmd">
+				<h3>Commands</h3>
+				   <ul>
+                    <li>
+                    <b>/balance</b> - баланс
+                    </li>
+                    <li>
+                    <b>/buy [id]</b> - купить предмет
+                    </li>
+                    <li>
+                    <b>/buyv [id]</b> - купить транспорт
+                    </li>
+                    <li>
+                    <b>/cost [id]</b> - стоимость предмета
+                    </li>
+                    <li>
+                    <b>/costv [id]</b> - стоимость транспорта
+                    </li>
+                    <li>
+                    <b>/sell [id]</b> - продать предмет
+                    </li>
+                    <li>
+                    <b>/setbalance [amount] [player]</b> - установить баланс игроку
+                    </li>
+                </ul>
+				<br id="wb">
+				<h2>WreckingBall</h2>
+
+                <p>
+                    Изи 50 слотов за 120 рублей АХАХАХАХАХ
+                </p>
+				<br id="wb_cfg">
+				<h3>Config</h3>
+				   <ul>
+                    <li>
+                    <b>ohwow</b> - кол-во слотов
+					</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
