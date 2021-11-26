@@ -44,9 +44,13 @@
 
                 <div class="divider left"></div>
 
-                <a class="title" href="#advanced">Plugins</a>
+                <a class="title" href="#faq">FAQ</a>
+				
+				<div class="divider left"></div>
+				
+				<a class="title" href="#plugins">Plugins</a>
 
-                <a class="section" href="#advanced">Interception.ClothingWeight</a>
+                <a class="section" href="#cw">Interception.ClothingWeight</a>
 				<a class="sub-section" href="#cw_cfg">Config</a>
                 <a class="section" href="#kf">Interception.KillFeed</a>
 				<a class="sub-section" href="#kf_cfg">Config</a>
@@ -96,7 +100,56 @@
 				
 				<div class="divider" style="width:24%; margin:30px 0;"></div>
                 
-                <h1>Plugins</h1>
+                <br id="faq">
+				<h1>FAQ</h1>
+				<p>
+                    Чтобы избежать типичных вопросов
+                </p>
+				
+				<ul>
+                    <li>
+                    <b>Как настроить то-то и то-то</b>
+                    </li>
+                    А для кого я этот сайт хуйни делал...
+                    <li>
+                    <b>Настроил конфиг и плагин наебнулся</b>
+                    </li>
+                    Неправильно настроил(скобочку или слеш проебал я хз), удаляй папку с плагином, рестарть сервер и настраивай заного
+					<li>
+                    <b>Поменял effect_id и теперь нет ЮИ</b>
+                    </li>
+                    Я ЖЕ СКАЗАЛ НЕ ТРОГАТЬ ЭТО БЛЯТЬ
+					<li>
+                    <b>Ничего не делал но плагин не работает</b>
+                    </li>
+                    Скрин консоли мне в вк очевидно
+					<li>
+                    <b>Как поменять кнопки в TPA</b>
+                    </li>
+                    Менять accept_key_index(принять) и decline_key_index(отменить). Если use_plugin_keys == false, то: 
+					<br>0 - кнопка прыжка
+					<br>1 - кнопка основного оружия
+					<br>2 - кнопка не основного оружия
+					<br>3 - кнопка приседания
+					<br>4 - кнопка чтобы лечь
+					<br>5 - кнопка спринта
+					<br>6 - повернуть ебалетку налево
+					<br>7 - повернуть ебалетку направо
+					<br>Если же use_plugin_keys == true, то: 
+					<br>то я не ебу, но там кнопки от 0 до 4, бинды в настройках посмотришь(Plugin/Mod keys)
+					<li>
+                    <b>Зачем effect_key</b>
+                    </li>
+					Чтобы несколько ЮИ не конфликтовали между собой(и по нему меняется текст в ЮИ)
+					<br>Ваще его можно менять если че, главное чтобы на всех плагинах где он есть - он везде был разным
+					<br>Смысла правда в его изменении нет
+				</ul>
+				
+				<div class="divider" style="width:24%; margin:30px 0;"></div>
+				
+				
+				<br id="plugins">
+				<h1>Plugins</h1>
                   
                 <br id="cw">
 				<h2>Interception.ClothingWeight</h2>
