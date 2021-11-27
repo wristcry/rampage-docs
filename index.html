@@ -6,10 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ДАКУМЕНТАЦИЯ ДЛЯ ЛУЧШИВО СЕРВЕРА РАМПЫЙДЖ СРП</title>
-    <meta name="description" content="A simple HTML/CSS DocumentationTemplate">
+    <title>ДАКУМЕНТАЦИЯ ДЛЯ ЛУЧШИВО(нет) СЕРВИРА РАМПЫЙДЖ СРП</title>
+    <meta name="description" content="дьяк пидарас">
     <meta name="author" content="Carlos Yllobre">
 
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css?">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
     
@@ -22,7 +23,7 @@
 
     <div class="navbar clear nav-top">
         <div class="row content">
-            <a href="#"><img class="logo" src="file.gif" width="80" height="100"></a>
+            <a href="#"><img class="logo" src="" width="80" height="100"></a>
             <a class="right" href="#"><i class="fas fa-book"></i>&nbsp; А зачем тут эта кнопачка 0_о</a>
             <a class="right" href="#"><i class="fas fa-paper-plane"></i>&nbsp; ты че еблан?</a>
         </div>
@@ -77,6 +78,11 @@
 				<a class="sub-section" href="#wd_cfg">Config</a>
 				<a class="section" href="#ny">Interception.NewYearUI</a>
 				<a class="sub-section" href="#ny_cfg">Config</a>
+				<a class="section" href="#ds">Interception.DisableStats</a>
+				<a class="sub-section" href="#ds_cfg">Config</a>
+				<a class="section" href="#at">Interception.AdminTools</a>
+				<a class="sub-section" href="#at_perm">Permissions</a>
+				<a class="sub-section" href="#at_cmd">Commands</a>
             
              <div class="space double"></div>
 
@@ -130,9 +136,9 @@
 					<br>0 - кнопка прыжка
 					<br>1 - кнопка основного оружия
 					<br>2 - кнопка не основного оружия
-					<br>3 - кнопка приседания
+					<br>3 - кнопка приседания(как было выяснено, она БЛЯДЬ багает)
 					<br>4 - кнопка чтобы лечь
-					<br>5 - кнопка спринта
+					<br>5 - кнопка спринта(как было выяснено, она БЛЯДЬ багает)
 					<br>6 - повернуть ебалетку налево
 					<br>7 - повернуть ебалетку направо
 					<br>Если же use_plugin_keys == true, то: 
@@ -143,6 +149,10 @@
 					Чтобы несколько ЮИ не конфликтовали между собой(и по нему меняется текст в ЮИ)
 					<br>Ваще его можно менять если че, главное чтобы на всех плагинах где он есть - он везде был разным
 					<br>Смысла правда в его изменении нет
+					<li>
+                    <b>Зачем звездочка в команде</b>
+                    </li>
+					Опциональный аргумент(ну то есть его можно не писать)
 				</ul>
 				
 				<div class="divider" style="width:24%; margin:30px 0;"></div>
@@ -162,6 +172,9 @@
 				<h3>Config</h3>
 				   <ul>
                     <li>
+                    <b>admintools_integration</b> - интеграция с AdminTools, нужна для корректной работы сетов и флая(в основном флая)
+                    </li>
+                    <li>
                     <b>default_gravity_multiplier</b> - дефолт модификатор гравитации (1 - дефолт в самой игре), будет ставится если у чела нет брони(донатной или вообще)
                     </li>
 					<li>
@@ -175,9 +188,6 @@
 					</li>
 					<li>
                     <b>backpack_id</b> - айди рюкзака
-					</li>
-					<li>
-                    <b>face_id</b> - айди какой-то хуйни (я хз че эт серьезно, но это элемент одежды у игрока)
 					</li>
 					<li>
                     <b>glasses_id</b> - айди очков
@@ -601,6 +611,206 @@
                     <b>effect_key</b> - айди ключа эффекта(не трогать блять)
                     </li>
                 </ul>
+				
+				<br id="ds">
+				<h2>Interception.DisableStats</h2>
+
+                <p>
+                    Отключает воду/еду/инфекцию
+                </p>
+				<br id="ds_cfg">
+				<h3>Config</h3>
+				   <ul>
+                    <li>
+                    <b>disable_food</b> - оффнуть еду
+					</li>
+                    <li>
+                    <b>disable_water</b> - оффнуть воду
+					</li>
+                    <li>
+                    <b>disable_virus</b> - оффнуть инфекцию(радиацию)(кстати я глянул и по факту работает это криво)
+					</li>
+                </ul>
+				
+				<br id="at">
+				<h2>Interception.AdminTools</h2>
+
+                <p>
+                    Тулзы для одменов(С ФЛАЕМ)
+                </p>
+				<br id="at_perm">
+				<h3>Permissions</h3>
+				   <ul>
+                    <li>
+                    <b>interception.admintools.animal</b> - /animal
+					</li>
+                    <li>
+                    <b>interception.admintools.ascend</b> - /ascend
+					</li>
+                    <li>
+                    <b>interception.admintools.back</b> - /back
+					</li>
+                    <li>
+                    <b>interception.admintools.boom</b> - /boom
+					</li>
+                    <li>
+                    <b>interception.admintools.clearinventory</b> - /clearinventory
+					</li>
+                    <li>
+                    <b>interception.admintools.clearinventory.toplayer</b> - /clearinventory другому игроку
+					</li>
+                    <li>
+                    <b>interception.admintools.descend</b> - /descend
+					</li>
+                    <li>
+                    <b>interception.admintools.fly</b> - /fly
+					</li>
+                    <li>
+                    <b>interception.admintools.forcedrop</b> - /forcedrop
+					</li>
+                    <li>
+                    <b>interception.admintools.freeze</b> - /freeze
+					</li>
+                    <li>
+                    <b>interception.admintools.god</b> - /god
+					</li>
+                    <li>
+                    <b>interception.admintools.home</b> - /home
+					</li>
+                    <li>
+                    <b>interception.admintools.jump</b> - /jump
+					</li>
+                    <li>
+                    <b>interception.admintools.kickall</b> - /kickall
+					</li>
+                    <li>
+                    <b>interception.admintools.killall</b> - /killall
+					</li>
+                    <li>
+                    <b>interception.admintools.randomteleport</b> - /randomteleport
+					</li>
+                    <li>
+                    <b>interception.admintools.recharge</b> - /recharge
+					</li>
+                    <li>
+                    <b>interception.admintools.refuel</b> - /refuel
+					</li>
+                    <li>
+                    <b>interception.admintools.repair</b> - /repair
+					</li>
+                    <li>
+                    <b>interception.admintools.repairobject</b> - /repairobject
+					</li>
+                    <li>
+                    <b>interception.admintools.skills</b> - /skills
+					</li>
+                    <li>
+                    <b>interception.admintools.skills.max</b> - /skills max
+					</li>
+                    <li>
+                    <b>interception.admintools.skills.min</b> - /skills min
+					</li>
+                    <li>
+                    <b>interception.admintools.skills.max.toplayer</b> - /skills max другому игроку
+					</li>
+                    <li>
+                    <b>interception.admintools.skills.min.toplayer</b> - /skills min другому игроку
+					</li>
+                    <li>
+                    <b>interception.admintools.tpall</b> - /tpall
+					</li>
+                    <li>
+                    <b>interception.admintools.unlockvehicle</b> - /unlockvehicle
+					</li>
+                    <li>
+                    <b>interception.admintools.whois</b> - /whois
+					</li>
+                    <li>
+                    <b>interception.admintools.wreck</b> - /wreck
+					</li>
+                    <li>
+                    <b>interception.admintools.wreckingball</b> - /wreckingball
+					</li>
+                </ul>
+				<br id="at_cmd">
+				<h3>Commands</h3>
+				   <ul>
+                    <li>
+                    <b>/animal [id]</b> - заспавнить животное(дьяка лол АХАХАХ)
+					</li>
+                    <li>
+                    <b>/ascend [height] | /asc [height]</b> - тпшнуться на [height] метров вверх
+					</li>
+                    <li>
+                    <b>/back</b> - вернуться на место последней смерти
+					</li>
+                    <li>
+                    <b>/boom</b> - взорваться нахуй
+					</li>
+                    <li>
+                    <b>/clearinventory [player*] | /ci [player*]</b> - очистить инвентарь себе или другому игроку
+					</li>
+                    <li>
+                    <b>/descend [height] | /desc [height]</b> - тпшнуться на [height] метров вниз
+					</li>
+                    <li>
+                    <b>/fly</b> - поиграть в майнкрафт в креативе
+					</li>
+                    <li>
+                    <b>/forcedrop [player] [id*] | /fd [player] [id*]</b> - дропнуть все предметы из инвентаря игрока([id*] - для дропа определенных итемов)
+					</li>
+                    <li>
+                    <b>/freeze [player]</b> - второй скилл цмки
+					</li>
+                    <li>
+                    <b>/god</b> - год(2021)
+					</li>
+                    <li>
+                    <b>/home</b> - тпшнуться на привязанную кровать
+					</li>
+                    <li>
+                    <b>/jump | /j</b> - тп на точку на которую смотришь
+					</li>
+                    <li>
+                    <b>/kickall [reason*]</b> - кикнуть всех нахуй
+					</li>
+                    <li>
+                    <b>/killall</b> - убить всех нахуй
+					</li>
+                    <li>
+                    <b>/randomteleport | /rtp</b> - тп на рандомный спавнпоинт
+					</li>
+                    <li>
+                    <b>/recharge | /rc</b> - зарядить аккум у транспорта(либо тот в котором сидишь либо тот на который смотришь)
+					</li>
+                    <li>
+                    <b>/refuel | /rf</b> - заправить либо транспорт(либо тот в котором сидишь либо тот на который смотришь) либо генератор(на который смотришь)
+					</li>
+                    <li>
+                    <b>/repair</b> - починить весь инвентарь, либо транспорт в котором сидишь
+					</li>
+                    <li>
+                    <b>/repairobject | /ro</b> - починить объект(транспорт, постройка, etc.) на который смотришь
+					</li>
+                    <li>
+                    <b>/skills [max|min] [player*]</b> - замаксить/поделить на ноль все скиллы(у себя или у другого игрока)
+					</li>
+                    <li>
+                    <b>/tpall</b> - тпшнуть весь сервер к себе
+					</li>
+                    <li>
+                    <b>/unlockvehicle | /uv</b> - анлокнуть транспорт
+					</li>
+                    <li>
+                    <b>/whois</b> - узнать кто поставил постройку или на кого залочен транспорт на которую(ый) смотришь
+					</li>
+                    <li>
+                    <b>/wreck</b> - убрать постройку или транспорт на которую(ый) смотришь
+					</li>
+                    <li>
+                    <b>/wreckingball [radius] | /wb [radius]</b> - убрать все нахуй(транспорт, постройки, предметы на земле) в указанном радиусе
+					</li>
+                </ul>
             </div>
 
         </div>
@@ -608,7 +818,29 @@
 
     </div>
 
-
+<script language="javascript">
+	function rand(min, max) {
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+	
+	window.onload = function(e) { 
+		var num = rand(0, 5);
+		if (num == 0)
+			document.getElementsByClassName("logo")[0].src = "rumia1.gif";
+		if (num == 1)
+			document.getElementsByClassName("logo")[0].src = "rumia2.gif";
+		if (num == 2)
+			document.getElementsByClassName("logo")[0].src = "rumia3.gif";
+		if (num == 3)
+			document.getElementsByClassName("logo")[0].src = "rumia4.gif";
+		if (num == 4)
+			document.getElementsByClassName("logo")[0].src = "rumia5.gif";
+		if (num == 5)
+			document.getElementsByClassName("logo")[0].src = "kirby.gif";
+	}
+</script>
 </body>
 
 </html>
